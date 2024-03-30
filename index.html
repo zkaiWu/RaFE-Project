@@ -42,7 +42,7 @@
         <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
             <!-- <h1 class="text-center"><span style="font-size: 2.5rem; font-style: oblique; font-family: cursive; font-weight: bolder">HeadArtist</span>: Text-conditioned 3D Head Generation with <br />
                 <span style="font-size: 2.5rem; color: rgb(124,212,178);  font-weight: bolder " >Self Score Distillation</span></h1> -->
-            <h1 class="text-center"><span style="font-size: 2.5rem; font-style: oblique; font-family: cursive; font-weight: bolder">RaFE</span>: Generative Radiance Fields Restoration <br />
+            <h1 class="text-center"><span style="font-size: 2.5rem; font-family: cursive; font-weight: bolder">RaFE</span>: Generative Radiance Fields Restoration <br />
         </div>
         <div class="container" style="max-width: 980px; margin-bottom: 20px;">
             <div class="row authors">
@@ -137,14 +137,27 @@
     <div class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-                <img src="static/pipeline.png" alt="architecture" style="width: 100%">
-                <!-- <h6 class="caption" style="text-align: left";>Our multi-view diffusion model learns a joint prior over 4 different views. 
-                    We optimize the UNet during training using real 3D data. During testing (3D generation), it can serve as a multi-view prior for 3D 
-                    generation visa Score Distillation Sampling.
-                </h6> -->
+                <img src="static/method.png" alt="architecture" style="width: 100%">
+                <h6 class="caption" style="text-align: left";>
+                    Given multi-view degraded images, we utilize the off-the-shelf methods to restore 
+                    high-quality multi-view images. Then, we train our Generative Restoration NeRF to generate a high-quality scene.
+                </h6>
             </div>
         </div>
     </div>
+
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Method</h2>
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+
 
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
