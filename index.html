@@ -171,13 +171,23 @@
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
-            <div class="col-md-12">
-                <h3> Mesh Refinement </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <!-- <iframe src="https://www.youtube.com/embed/5jKry8n5YO8" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> -->
-                    </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/mesh_video/drums_coarse.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
                 </div>
+                <h6 class="caption">Coarse Mesh</h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/mesh_video/drums_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">Refined Mesh</h6>
             </div>
         </div>
     </div>
