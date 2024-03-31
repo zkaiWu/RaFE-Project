@@ -2,11 +2,13 @@
 // This is based on: http://thenewcode.com/364/Interactive-Before-and-After-Video-Comparison-in-HTML5-Canvas
 // With additional modifications based on: https://jsfiddle.net/7sk5k4gp/13/
 
+
 function playVids(videoId) {
+    // get canvas
     var videoMerge = document.getElementById(videoId + "Merge");
     var vid = document.getElementById(videoId);
 
-    var position = 0.75;
+    var position = 0.5;
     var vidWidth = vid.videoWidth/2;
     var vidHeight = vid.videoHeight;
 
@@ -94,8 +96,6 @@ function playVids(videoId) {
             mergeContext.fillStyle = "#444444";
             mergeContext.fill();
 
-            
-            
         }
         requestAnimationFrame(drawLoop);
     } 
