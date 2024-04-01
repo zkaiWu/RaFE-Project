@@ -169,23 +169,34 @@
 
 
     <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
+    <div class="container" style="max-width: 768px">
         <div class="row">
             <div class="col-sm-12">
                 <h2>Mesh Refinement</h2>
                 <p>our restoration algorithm could not only recover the high-quality and view-consistent images,  but also refine the 3D geometry</p>
             </div>
         </div>
+        <div class="row">
         <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
+            <div class="col-6" style="align-self:center">
+                <div class="video-compare-container" style="width: 100%;">
                     <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
                         <source data-src="static\mesh_video\drums_coarse_fine.mp4" type="video/mp4"></source>
                     </video>
-                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+                    <canvas height="752" class="videoMerge" id="ex1Merge" width="2004"></canvas>
                 </div>
                 <h6 class="caption">Drums</h6>
             </div>
+            <div class="col-6" style="align-self:center">
+                <div class="video-compare-container" style="width: 100%;">
+                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\mesh_video\ficus_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex2Merge" width="2004"></canvas>
+                </div>
+                <h6 class="caption">Ficus</h6>
+            </div>
+        </div>
     </div>
 
     <!-- <hr class="divider" />
