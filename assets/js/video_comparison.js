@@ -116,3 +116,170 @@ function resizeAndPlay(element)
     
   playVids(element.id);
 }
+
+
+// function playVids43(videoId) {
+//     // get canvas
+//     var videoMerge = document.getElementById(videoId + "Merge");
+//     var vid = document.getElementById(videoId);
+
+//     var position1 = 0.333;
+//     var position2 = 0.666;
+//     var vidWidth = vid.videoWidth/3;
+//     var vidHeight = vid.videoHeight;
+
+//     var mergeContext = videoMerge.getContext("2d");
+
+    
+//     if (vid.readyState > 3) {
+//         vid.play();
+
+//         function trackLocation(e) {
+//             // Normalize to [0, 1]
+//             bcr = videoMerge.getBoundingClientRect();
+//             position = ((e.pageX - bcr.x) / bcr.width);
+//             // videoMerge.setAttribute('data-position', position);
+//         }
+//         function trackLocationTouch(e) {
+//             // Normalize to [0, 1]
+//             bcr = videoMerge.getBoundingClientRect();
+//             position = ((e.touches[0].pageX - bcr.x) / bcr.width);
+//         }
+
+//         videoMerge.addEventListener("mousemove",  trackLocation, false); 
+//         videoMerge.addEventListener("touchstart", trackLocationTouch, false);
+//         videoMerge.addEventListener("touchmove",  trackLocationTouch, false);
+
+
+//         function drawLoop() {
+//             if (position2 < position1) {
+//                 position2 = position1;
+//             }
+//             mergeContext.drawImage(vid, 0, 0, vidWidth, vidHeight, 0, 0, vidWidth, vidHeight);
+//             var colStart1 = (vidWidth * position1).clamp(0.0, vidWidth);
+//             var colWidth1 = (vidWidth - (vidWidth * position1)).clamp(0.0, vidWidth);
+//             mergeContext.drawImage(vid, colStart1+vidWidth, 0, colWidth1, vidHeight, colStart1, 0, colWidth1, vidHeight);
+//             var colStart2 = (vidWidth * position2).clamp(0.0, vidWidth);
+//             var colWidth2 = (vidWidth - (vidWidth * position2)).clamp(0.0, vidWidth);
+//             requestAnimationFrame(drawLoop);
+
+            
+//             var arrowLength = 0.09 * vidHeight;
+//             var arrowheadWidth = 0.025 * vidHeight;
+//             var arrowheadLength = 0.04 * vidHeight;
+//             var arrowPosY = vidHeight / 10;
+//             var arrowWidth = 0.007 * vidHeight;
+//             var currX = vidWidth * position1;
+
+//             // Draw circle
+//             mergeContext.arc(currX, arrowPosY, arrowLength*0.7, 0, Math.PI * 2, false);
+//             mergeContext.fillStyle = "#FFD79340";
+//             mergeContext.fill()
+//             //mergeContext.strokeStyle = "#444444";
+//             //mergeContext.stroke()
+            
+//             // Draw border
+//             mergeContext.beginPath();
+//             mergeContext.moveTo(vidWidth*position1, 0);
+//             mergeContext.lineTo(vidWidth*position1, vidHeight);
+//             mergeContext.closePath()
+//             mergeContext.strokeStyle = "#444444";
+//             mergeContext.lineWidth = 5;            
+//             mergeContext.stroke();
+
+//             // Draw arrow
+//             mergeContext.beginPath();
+//             mergeContext.moveTo(currX, arrowPosY - arrowWidth/2);
+            
+//             // Move right until meeting arrow head
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY - arrowWidth/2);
+            
+//             // Draw right arrow head
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY - arrowheadWidth/2);
+//             mergeContext.lineTo(currX + arrowLength/2, arrowPosY);
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY + arrowheadWidth/2);
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY + arrowWidth/2);
+
+//             // Go back to the left until meeting left arrow head
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY + arrowWidth/2);
+            
+//             // Draw left arrow head
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY + arrowheadWidth/2);
+//             mergeContext.lineTo(currX - arrowLength/2, arrowPosY);
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY  - arrowheadWidth/2);
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY);
+            
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY - arrowWidth/2);
+//             mergeContext.lineTo(currX, arrowPosY - arrowWidth/2);
+
+//             mergeContext.closePath();
+
+//             mergeContext.fillStyle = "#444444";
+//             mergeContext.fill();
+
+
+//             // Draw circle
+//             mergeContext.arc(currX, arrowPosY, arrowLength*0.7, 0, Math.PI * 2, false);
+//             mergeContext.fillStyle = "#FFD79340";
+//             mergeContext.fill()
+//             //mergeContext.strokeStyle = "#444444";
+//             //mergeContext.stroke()
+            
+
+//             currX = vidWidth * position2;
+
+//             // Draw border
+//             mergeContext.beginPath();
+//             mergeContext.moveTo(vidWidth*position2, 0);
+//             mergeContext.lineTo(vidWidth*position2, vidHeight);
+//             mergeContext.closePath()
+//             mergeContext.strokeStyle = "#444444";
+//             mergeContext.lineWidth = 5;            
+//             mergeContext.stroke();
+
+//             // Draw arrow
+//             mergeContext.beginPath();
+//             mergeContext.moveTo(currX, arrowPosY - arrowWidth/2);
+            
+//             // Move right until meeting arrow head
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY - arrowWidth/2);
+            
+//             // Draw right arrow head
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY - arrowheadWidth/2);
+//             mergeContext.lineTo(currX + arrowLength/2, arrowPosY);
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY + arrowheadWidth/2);
+//             mergeContext.lineTo(currX + arrowLength/2 - arrowheadLength/2, arrowPosY + arrowWidth/2);
+
+//             // Go back to the left until meeting left arrow head
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY + arrowWidth/2);
+            
+//             // Draw left arrow head
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY + arrowheadWidth/2);
+//             mergeContext.lineTo(currX - arrowLength/2, arrowPosY);
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY  - arrowheadWidth/2);
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY);
+            
+//             mergeContext.lineTo(currX - arrowLength/2 + arrowheadLength/2, arrowPosY - arrowWidth/2);
+//             mergeContext.lineTo(currX, arrowPosY - arrowWidth/2);
+
+//             mergeContext.closePath();
+
+//             mergeContext.fillStyle = "#444444";
+//             mergeContext.fill();
+
+//         }
+//         requestAnimationFrame(drawLoop);
+//     } 
+// }
+
+
+// function resizeAndPlay43(element)
+// {
+//   var cv = document.getElementById(element.id + "Merge");
+//   cv.width = element.videoWidth/3;
+//   cv.height = element.videoHeight;
+//   element.play();
+//   element.style.height = "0px";  // Hide video without stopping it
+    
+//   playVids(element.id);
+// }

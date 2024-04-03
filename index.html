@@ -172,6 +172,127 @@
     <div class="container" style="max-width: 768px">
         <div class="row">
             <div class="col-sm-12">
+                <h2>Demo</h2>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <h4>Super resolution</h4>
+        </div>
+        <div class="row">
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 70%;">
+                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\sr\drums_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex1Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\sr\lego_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex2Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\sr\flower_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex3Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex4" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\sr\orchids_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex4Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div style="width: 100%; text-align: center; margin-top: 15px">
+                <h4>Blur</h4>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex5" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\blur\horns_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex5Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex6" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\blur\flower_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex6Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div style="width: 100%; text-align: center; margin-top: 15px">
+                <h4>Noise</h4>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex7" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\noise\flower_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex7Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex8" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\noise\fortress_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex8Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div style="width: 100%; text-align: center; margin-top: 15px">
+                <h4>Mixed-degradation</h4>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 75%;">
+                    <video class="video lazy" id="ex9" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\mixed_degradation\hotdog_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex9Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 75%;">
+                    <video class="video lazy" id="ex10" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\mixed_degradation\chair_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex10Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex11" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\mixed_degradation\room_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex11Merge" width="2004"></canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 80%;">
+                    <video class="video lazy" id="ex12" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static\demo\mixed_degradation\trex_coarse_fine.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex12Merge" width="2004"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px">
+        <div class="row">
+            <div class="col-sm-12">
                 <h2>Mesh Refinement</h2>
                 <p>our restoration algorithm could not only recover the high-quality and view-consistent images,  but also refine the 3D geometry</p>
             </div>
@@ -180,28 +301,28 @@
         <div class="row captioned_videos">
             <div class="col-8" style="align-self:center; margin-left: 125px">
                 <div class="video-compare-container" style="width: 100%;">
-                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                    <video class="video lazy" id="ex15" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
                         <source data-src="static\mesh_video\drums_coarse_fine_2.mp4" type="video/mp4"></source>
                     </video>
-                    <canvas height="752" class="videoMerge" id="ex1Merge" width="2004"></canvas>
+                    <canvas height="752" class="videoMerge" id="ex15Merge" width="2004"></canvas>
                 </div>
                 <h6 class="caption">Drums</h6>
             </div>
             <div class="col-8" style="align-self:center; margin-left: 125px">
                 <div class="video-compare-container" style="width: 100%;">
-                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                    <video class="video lazy" id="ex14" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
                         <source data-src="static\mesh_video\ficus_coarse_fine.mp4" type="video/mp4"></source>
                     </video>
-                    <canvas height="752" class="videoMerge" id="ex2Merge" width="2004"></canvas>
+                    <canvas height="752" class="videoMerge" id="ex14Merge" width="2004"></canvas>
                 </div>
                 <h6 class="caption">Ficus</h6>
             </div>
             <div class="col-8" style="align-self:center; margin-left: 125px">
                 <div class="video-compare-container" style="width: 100%;">
-                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                    <video class="video lazy" id="ex15" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
                         <source data-src="static\mesh_video\lego_coarse_fine.mp4" type="video/mp4"></source>
                     </video>
-                    <canvas height="752" class="videoMerge" id="ex3Merge" width="2004"></canvas>
+                    <canvas height="752" class="videoMerge" id="ex15Merge" width="2004"></canvas>
                 </div>
                 <h6 class="caption">Lego</h6>
             </div>
